@@ -1,0 +1,157 @@
+:root {
+    --background-top: #45402A;
+    --background-bottom: #7F5727;
+    --accent-brown: #7F5727;
+    --accent-gold: #C0A062;
+    --text-light: #ffffff;
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--background-top) 24%, var(--background-bottom) 87%);
+    background-attachment: fixed;
+    font-family: "Inria Serif", serif;
+    color: var(--text-light);
+}
+
+/* NAVBAR */
+.navbar-brand {
+    font-family: "Inknut Antiqua", serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--accent-gold) !important;
+}
+
+/* HEADER / JUMBOTRON */
+.jumbotron {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.hero-image-wrapper {
+    max-height: 70vh;
+    overflow: scroll;
+}
+
+.hero-image {
+    object-fit: cover;
+    object-position: centerbottomf;
+}
+
+/* Overlay text on hero */
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: 600px;
+    text-align: right;
+    padding: 1.5rem 2rem;
+}
+
+.overlay-title {
+    font-family: "Inknut Antiqua", serif;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+}
+
+.overlay-subtitle {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+}
+
+.overlay-subtitle ins {
+    text-decoration: underline;
+}
+
+.overlay-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* SECTION HEADING */
+.section-heading {
+    font-family: "Italiana", serif;
+    color: var(--accent-gold);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* FOOTER */
+.initials-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.initials-text {
+    font-family: "Inknut Antiqua", serif;
+    font-size: 1rem;
+    color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.social-links .social-placeholder {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: var(--accent-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* RESPONSIVE BEHAVIOUR */
+@media (max-width: 767.98px) {
+    .hero-overlay {
+        position: static;
+        transform: none;
+        text-align: left;
+        padding: 1.5rem 1rem 2rem 1rem;
+        background: rgba(0, 0, 0, 0.55);
+        margin-top: -1.5rem;
+    }
+
+    .overlay-title {
+        font-size: 2rem;
+    }
+
+    .overlay-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .overlay-description {
+        font-size: 0.95rem;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+}
